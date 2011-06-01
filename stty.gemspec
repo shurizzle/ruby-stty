@@ -1,6 +1,6 @@
 Gem::Specification.new {|g|
     g.name          = 'stty'
-    g.version       = '0.0.1'
+    g.version       = '0.0.2'
     g.author        = 'shura'
     g.email         = 'shura1991@gmail.com'
     g.homepage      = 'http://github.com/shurizzle/ruby-stty'
@@ -12,5 +12,5 @@ Gem::Specification.new {|g|
     g.executables   = [ ]
     g.has_rdoc      = true
 
-    g.add_dependency('termios')
+    g.add_dependency('ruby-termios')
 }

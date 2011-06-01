@@ -378,15 +378,24 @@ module STTY
     end
   end
 
-  def cols(n)
-    data = [self.size[0], n, 0, 0].pack('SSSS')
-
-    self.ioctl(TIOCSWINSZ, data) >= 0 ? true : false
+  def cols
+    self.size[1]
   end
   alias columns cols
 
-  def rows(n)
-    data = [n, self.size[1], 0, 0].pack('SSSS')
+  def rows
+    self.size[0]
+  end
+
+  def cols=(n)
+    data = [self.rows, n, 0, 0].pack('SSSS')
+
+    self.ioctl(TIOCSWINSZ, data) >= 0 ? true : false
+  end
+  alias columns= cols=
+
+  def rows=(n)
+    data = [n, self.cols, 0, 0].pack('SSSS')
 
     self.ioctl(TIOCSWINSZ, data) >= 0 ? true : false
   end
