@@ -289,7 +289,7 @@ module STTY
   end
 
   def sane
-    self.cread; self.noignbrk; self.brkint; self.noinlcr; self.igncr; self.icrnl
+    self.cread; self.noignbrk; self.brkint; self.noinlcr; self.noigncr; self.icrnl
     self.noiutf8; self.noixoff; self.noiuclc; self.noixany; self.imaxbel; self.opost
     self.noolcuc; self.noocrnl; self.onlcr; self.noonocr; self.noonlret; self.noofill
     self.noofdel; self.nl0; self.cr0; self.tab0; self.bs0; self.vt0; self.ff0

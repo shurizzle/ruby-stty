@@ -1,6 +1,6 @@
 Gem::Specification.new {|g|
     g.name          = 'stty'
-    g.version       = '0.0.2'
+    g.version       = '0.0.2.1'
     g.author        = 'shura'
     g.email         = 'shura1991@gmail.com'
     g.homepage      = 'http://github.com/shurizzle/ruby-stty'
